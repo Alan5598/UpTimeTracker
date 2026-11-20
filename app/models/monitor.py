@@ -1,6 +1,3 @@
-from datetime import datetime
-from uuid import UUID
-
 from sqlalchemy import (
     Boolean,
     Column,
@@ -11,10 +8,8 @@ from sqlalchemy import (
     Text,
 )
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import declarative_base
 
-
-Base = declarative_base()
+from app.models.base import Base
 
 
 class Monitor(Base):
