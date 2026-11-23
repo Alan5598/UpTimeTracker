@@ -26,7 +26,7 @@ class Monitor(Base):
     )
 
     name = Column(
-        String(255),
+        String(25),
         nullable=False)
     monitor_type = Column(
         String(10),
@@ -39,7 +39,7 @@ class Monitor(Base):
         String(10), 
         nullable=True)
     expected_status_codes = Column(
-        String(255),
+        String(50),
         nullable=True)
     keyword = Column(
         Text, 

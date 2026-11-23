@@ -9,7 +9,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    app_name: str = "pulseMonitor"
+    app_name: str = "PulseMonitor"
     app_env: str = "development"
     app_debug: bool = False
     log_level: str = "INFO"

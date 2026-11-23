@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["health"])
 
-# Neon can take a few seconds to wake from idle, so don't set this too low
-CHECK_TIMEOUT_SECONDS = 15.0
+CHECK_TIMEOUT_SECONDS = 30.0
 
 
 async def _run_check(name: str, check) -> str:

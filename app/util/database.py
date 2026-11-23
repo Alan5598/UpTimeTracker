@@ -18,6 +18,15 @@ sessionLocal = async_sessionmaker(
 )
 
 async def get_db():
-    async with sessionLocal( ) as db:
+    async with sessionLocal() as db:
         yield db
+
+
+async def check_database() -> None:
+    async with engine.connect() as conn:
+        await conn.execute(__import__("sqlalchemy").text("SELECT 1"))
+
+
+async def dispose_engine() -> None:
+    await engine.dispose()
 
